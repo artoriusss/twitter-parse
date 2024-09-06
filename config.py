@@ -3,5 +3,6 @@ account_ids = [
 ]
 
 keywords = [
+    "war"
     # 'keyword1', 'keyword2', 'keyword3' if you want to scrape tweets with specific keywords
 ]

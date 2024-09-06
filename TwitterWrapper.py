@@ -1,7 +1,7 @@
 import json, asyncio, os
 from tqdm import tqdm
 #from .helpers import *
-from src.twitter.helpers import *
+from helpers import *
 
 class TwitterWrapper():
     def __init__(self):
@@ -13,6 +13,7 @@ class TwitterWrapper():
 
     def _create_dirs(self):
         os.makedirs(self.img_dir, exist_ok=True)
+        os.makedirs(self.raw_path, exist_ok=True)
         os.makedirs(self.prc_dir, exist_ok=True)
         os.makedirs(self.accs_dir, exist_ok=True)
 

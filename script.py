@@ -1,7 +1,8 @@
 #from .TwitterWrapper import TwitterWrapper
-from src.twitter.TwitterWrapper import TwitterWrapper
-from config.logger import get_logger
-from .parse import tw_main
+from TwitterWrapper import TwitterWrapper
+from logger import get_logger
+from parse import tw_main
+import asyncio
 
 logger = get_logger(__name__)
 

@@ -1,4 +1,4 @@
-from config.logger import get_logger
+from logger import get_logger
 import requests, os
 from tqdm import tqdm
 import re
