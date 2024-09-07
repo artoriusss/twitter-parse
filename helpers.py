@@ -63,13 +63,14 @@ def clean_text(text):
     text = re.sub(r'@\w+', '', text)
     text = unescape(text)
     words = text.strip().split()
-    return ' '.join(words) if len(words) > 25 else None
+    return ' '.join(words) #if len(words) > 25 else None
 
 def process_user_info(user):
     processed_user = {
         "id": user['id'],
         "url": user['url'],
         "username": user['username'],
+        "verified": user['verified'],
         "display_name": user['displayname'],
         "created_date": user['created'],
         "description": user['rawDescription'],
@@ -119,6 +120,7 @@ def process_tweet(tweet):
         "like_count": tweet.get("likeCount"),
         "quote_count": tweet.get("quoteCount"),
         "reply_count": tweet.get("replyCount"),
+        "mentioned_users": tweet.get("mentionedUsers", []),
         "retweet_count": tweet.get("retweetCount"),
         "view_count": tweet.get("viewCount"),
         "quoted_tweet_id": quoted_tweet_id,
